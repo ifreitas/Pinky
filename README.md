@@ -1,5 +1,5 @@
 [![CircleCI](https://circleci.com/gh/ifreitas/Pinky/tree/master.svg?style=shield&circle-token=Pinky)](https://circleci.com/gh/ifreitas/Pinky)
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/26d3188e861d4aa8b13b12818b1f81ba)](https://www.codacy.com/app/israel.araujo.freitas/Pinky?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=ifreitas/Pinky&amp;utm_campaign=Badge_Grade)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/2fb75814031a43fc94b8a9359ce00b5e)](https://www.codacy.com/app/israel.araujo.freitas/Pinky?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=ifreitas/Pinky&amp;utm_campaign=Badge_Grade)
 
 # Pinky
 It is a simple asynchronous and non-blocking web interface for Program AB. Program AB is the reference implementation of the AIML 2.0 draft specification. 
