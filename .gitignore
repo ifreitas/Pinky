@@ -1,0 +1,14 @@
+logs
+target
+.cache-main
+/.idea
+/.idea_modules
+/.classpath
+/.project
+/.settings
+/RUNNING_PID
+/bin/
+/project/project/
+/project/target/
+/project/scaffold.sbt
+

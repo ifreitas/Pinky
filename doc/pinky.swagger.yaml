@@ -1,0 +1,76 @@
+swagger: '2.0'
+info:
+  version: '0.1.0'
+  title: 'Pinky'
+  description: 'A simple asynchronous and non-blocking web interface for Program AB. Program AB is the reference implementation of the AIML 2.0 draft specification. AIML is a widely adopted standard for creating chat bots and mobile virtual assistants like ALICE, Mitsuku, English Tutor, The Professor, S.U.P.E.R. and many more. Program AB was developed by Richard Wallace (contact info@alicebot.org) and first released in January, 2013. More info about Program AB: https://code.google.com/archive/p/program-ab/. That name comes from an american animated television series called  Pinky and the Brain.'
+  license:
+    name: 'LGPL'
+  contact:
+    name: 'Israel Freitas'
+    email: 'israel.araujo.freitas@gmail.com'
+schemes: 
+- https
+paths:
+  /chat/{conversationId}/{botId}:
+    post:
+      tags: 
+        - Chat
+      description: ''
+      consumes: 
+      - "application/x-www-form-urlencoded"
+      responses:
+        200:
+          description: 'Ok'
+          schema:
+            $ref:
+              '#/definitions/Message'
+        404:
+          description: 'Bot not found'
+      produces:
+      - "application/json"
+      parameters: 
+      - name: conversationId
+        in: path
+        description: 'The identifier of the conversation. This ID is managed by the origin server, so Pinky will forward the received input to the bot that is in such conversation. Case that conversation does not yet exists, Pinky creates one.'
+        type: string
+        required: true
+      - name: 'botId'
+        in: path
+        description: 'The identifier of the bot. It must be the exact name of some bot already present in Pinky, otherwise a 404 status error is returned.'
+        type: 'string'
+        required: true
+      - name: 'message'
+        in: 'formData'
+        type: 'string'
+        description: 'The user message to that bot.'
+        required: true
+  /bots/{id}/reload:
+    put:
+      tags:
+      - Bot
+      summary: 'Reload the knowledge base of the given bot.'
+      description: 'It disables all instances of the given bot, make the AIML Interpreter reload all its files and enables all instances again.'
+      responses:
+        200:
+          description: 'Ok'
+        404:
+          description: 'Bot not found'
+        422:
+          description: 'Error trying to reload'
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: 'The identifier of the bot.'
+        type: string
+definitions:
+  Message:
+    properties:
+      text:
+        type: 'string'
+        description: 'All the bot responses for the previous input.'
+  
+  
+  
+
+  
