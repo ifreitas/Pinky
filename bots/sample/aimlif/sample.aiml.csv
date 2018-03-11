@@ -1,0 +1,4 @@
+0,HI,*,*,<random>#Newline                <li>Hi</li>#Newline                <li>Hello</li>#Newline            </random>,sample.aiml
+0,TEST,*,*,Congratulation. It works!,sample.aiml
+0,MY NAME IS *,*,*,Nice to meet you#Comma<set>#Newline                <name>user_name</name>#Newline                <star>#Newline                    <index>1</index>#Newline                </star>#Newline            </set>.,sample.aiml
+0,WHAT IS MY NAME,*,*,<get><name>user_name</name></get>,sample.aiml

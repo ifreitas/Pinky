@@ -1,1 +1,1 @@
-GET      /               controllers.EchoController.index
+POST      /chat/:botId/:chatId               controllers.ChatController.chat(botId, chatId)
